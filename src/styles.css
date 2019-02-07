@@ -1,14 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 .container-fluid, .row {
     height: 100%;
     min-height: 100%;
   }
-  
+  /* .navbar.bg-dark{ background:  #f7f7f7 !important;} */
+ 
   html, body {
     height: 100%; font-family: 'Open Sans', sans-serif;
   }
+  .navbar-nav div li{ display: inline-block;}
   h4{color:#393939; margin-top: 30px;}
   .bdre2 {
     border-bottom: 2px solid #999;

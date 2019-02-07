@@ -15,17 +15,17 @@
     
     <form>
       <div class="form-group">
-        <input type="email" class="form-control fadeIn second" id="email" placeholder="Email / Phone" name="email">
+        <input type="email" class="form-control fadeIn second" id="email" placeholder="Email / Phone" name="email" [(ngModel)]="emailvalue">
       </div>
       <div class="form-group">
-        <input type="password" class="form-control fadeIn third" id="pwd" placeholder="Password" name="pswd">
+        <input type="password" class="form-control fadeIn third" id="pwd" placeholder="Password" name="pswd" [(ngModel)]="pwdvalue">
       </div>
       <div class="form-group form-check text-right">
         <label class="forgotpasslink underlineHover">
             Forgot Password?
         </label>
       </div>
-      <div  class="btn btn-primary fadeIn fourth">Sign In</div>
+      <div class="btn btn-primary fadeIn fourth"  (click)="loginvalidation(emailvalue,pwdvalue)">Sign In</div>
     </form>
  
     </div>
