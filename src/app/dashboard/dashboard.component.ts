@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalsService} from '../modal.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: ModalsService){}
+  //open popup code start
+  openModal(id: string) {
+    this.modalService.open(id);
 
-  ngOnInit() {
-  }
+}
+//open popup code end
 
+//close popup code start
+closeModal(id: string) {
+    this.modalService.close(id);
+}
+//close popup code end
+
+columnDefs = [
+  {headerName: 'Make', field: 'make'},
+  {headerName: 'Model', field: 'model'},
+  {headerName: 'Price', field: 'price', editable: true}
+];
+
+rowData = [];
+
+ngOnInit() {
+  fetch('https://api.myjson.com/bins/15psn9')
+    .then(result => result.json())
+    .then(rowData => this.rowData = rowData);
+}
 }

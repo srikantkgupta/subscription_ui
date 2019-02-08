@@ -12,8 +12,10 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { GlobalServiceService} from './global-service.service'
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
-
+import {HttpModule} from '@angular/http';
+import { AgGridModule } from 'ag-grid-angular';
+import { ModalsService } from './modal.service';
+import{ModalPopUpComponent} from './modal.component'; 
 
 
 @NgModule({
@@ -25,15 +27,16 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     TabComponent,
     ContactListComponent,
-      
-    
+    ModalPopUpComponent,
   ],
+
   imports: [
-    BrowserModule,FormsModule,HttpClientModule,
-    AppRoutingModule,NgbModule.forRoot(),
-    
+    BrowserModule,FormsModule,HttpClientModule,HttpModule,
+    AppRoutingModule,NgbModule.forRoot(),  
+    AgGridModule.withComponents(null)  
   ],
-  providers: [GlobalServiceService],
+  
+  providers: [GlobalServiceService,ModalsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
