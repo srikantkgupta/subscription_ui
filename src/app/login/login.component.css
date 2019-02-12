@@ -13,6 +13,13 @@ h6{font-size: 18px;
         text-align: right;
         margin-top: 7px;
     }
+    /* .ng-invalid:not(form) {
+      background-color: lightcoral;
+    } */
+    button:disabled {
+      background-color: #6c757d;
+    border-color: #6c757d;
+   }
 /* ANIMATIONS */
 
 /* Simple CSS3 Fade-in-down Animation */

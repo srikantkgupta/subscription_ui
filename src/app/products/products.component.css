@@ -578,3 +578,4 @@ footer {
    .sidebar-menu ul li.active a{    background-color:#1f282d;
     border-left-color: #2FA3E6;
     color:#fff;}
+    main{position: relative;}

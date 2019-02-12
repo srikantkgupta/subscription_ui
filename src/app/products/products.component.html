@@ -135,6 +135,28 @@
     <div class="ContentBox">
       <main> 
         Main Content 
+        <div style="height: 100%; padding-top: 35px; box-sizing: border-box; width: auto;">
+          <ag-grid-angular
+            #agGrid
+            style="width: auto; height: 100%;"
+            id="myGrid"
+            class="ag-theme-balham"
+            [enableSorting]="true"
+            [pagination]="true"
+            [suppressDragLeaveHidesColumns]="true"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [suppressRowClickSelection]="true"
+            [rowSelection]="rowSelection"
+            [rowData]="rowData"
+            (gridReady)="onGridReady($event)"
+          ></ag-grid-angular>
+        </div>
+        <div style="position: absolute; top: 10px; left: auto; width: 100%;">
+          <input type="text" class="form-control" (input)="onQuickFilterChanged()" style="width: 30%; display: inline-block;" id="quickFilter" placeholder="quick filter..." />
+          <!-- <label> File Name: <input type="text" id="fileName" /> </label> -->
+          <label style="margin-left: 20px;"> <button (click)="onBtExport()" class="btn btn-info">Export to CSV</button> </label>
+        </div>
       </main>
       <footer> 
         Footer 

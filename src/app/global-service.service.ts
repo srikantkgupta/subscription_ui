@@ -9,6 +9,7 @@ export class GlobalServiceService {
 
   url = 'http://10.191.234.10:9090';
   logindata;
+  getUserIdprofile;
   constructor(private http: HttpClient) { }
 
 
@@ -36,7 +37,18 @@ export class GlobalServiceService {
     return this.http.post('http://10.97.192.176:8080/login', this.logindata, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        //'authorization': 'Basic YWRtaW46MTExMTEx',
+      })
+    }).pipe(map((response: Response) => {
+      console.log(response);
+      return response;
+    }));
+  }
+
+  jsonCalling() {
+  
+    return this.http.get('/assets/dummy.json', {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
       })
     }).pipe(map((response: Response) => {
       console.log(response);

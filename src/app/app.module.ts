@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -16,7 +17,9 @@ import {HttpModule} from '@angular/http';
 import { AgGridModule } from 'ag-grid-angular';
 import { ModalsService } from './modal.service';
 import{ModalPopUpComponent} from './modal.component'; 
-
+import { GridModule } from '@syncfusion/ej2-angular-grids';
+import { PageService, SortService, FilterService, GroupService } from '@syncfusion/ej2-angular-grids';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 @NgModule({
   declarations: [
@@ -28,15 +31,16 @@ import{ModalPopUpComponent} from './modal.component';
     TabComponent,
     ContactListComponent,
     ModalPopUpComponent,
+    TransactionsComponent,
   ],
 
   imports: [
-    BrowserModule,FormsModule,HttpClientModule,HttpModule,
+    BrowserModule,FormsModule,HttpClientModule,HttpModule,GridModule,ReactiveFormsModule,
     AppRoutingModule,NgbModule.forRoot(),  
     AgGridModule.withComponents(null)  
   ],
   
-  providers: [GlobalServiceService,ModalsService],
+  providers: [GlobalServiceService, ModalsService, PageService, SortService, FilterService, GroupService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

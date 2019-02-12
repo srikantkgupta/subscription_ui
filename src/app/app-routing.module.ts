@@ -5,6 +5,7 @@ import {HeaderComponent} from './header/header.component';
 import {TabComponent} from './tab/tab.component';
 import {ProductsComponent} from './products/products.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {ContactListComponent} from './contact-list/contact-list.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'tab', component: TabComponent },
   { path: 'product', component: ProductsComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'subscriptions', component: ContactListComponent },
   { path: '**', redirectTo: '' }
 
 ];

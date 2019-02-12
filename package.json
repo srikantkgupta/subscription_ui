@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "@ng-bootstrap/ng-bootstrap": "^4.0.2",
+    "@syncfusion/ej2": "^16.4.52",
+    "@syncfusion/ej2-angular-grids": "^16.4.52",
     "@types/jquery": "^3.3.29",
     "@types/underscore": "^1.8.9",
     "ag-grid-angular": "^20.0.0",

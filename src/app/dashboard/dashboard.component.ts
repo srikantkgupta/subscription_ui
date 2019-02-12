@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalsService} from '../modal.service';
+import {GlobalServiceService} from '../global-service.service'
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +9,7 @@ import { ModalsService} from '../modal.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private modalService: ModalsService){}
+  constructor(private modalService: ModalsService,private globalServiceService: GlobalServiceService){}
   //open popup code start
   openModal(id: string) {
     this.modalService.open(id);
@@ -31,8 +32,27 @@ columnDefs = [
 rowData = [];
 
 ngOnInit() {
+
+  this.globalServiceService.jsonCalling()
+      .subscribe(result => {
+        console.log(result);
+      }, err => {
+        console.log(err);
+      })
+
+
+
   fetch('https://api.myjson.com/bins/15psn9')
     .then(result => result.json())
     .then(rowData => this.rowData = rowData);
-}
-}
+
+
+    
+     
+    }
+
+
+
+
+  }
+
