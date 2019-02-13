@@ -1,69 +1,79 @@
-<!-- 
-
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">Logo</a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link 1</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link 2</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link 3</a>
-      </li>
-    </ul>
-  </nav>
-  
-  <div class="container-fluid">
-    <h3>Brand / Logo</h3>
-    <p>The .navbar-brand class is used to highlight the brand/logo/project name of your page.</p>
-
-    <a href="" ng-click="showme=true">Show</a>
-    <button ng-click="showme=false">Hide</button> 
-    
-    <div class="wrapper">
-      <p ng-hide="showme">It will appear here!</p>
-      <h2 ng-show="showme">This is mah content, yo!</h2>
+    <div class="container-fluid">
+      <div class="rowbar">
+        <div class="row">
+          <div class="col-2">
+  <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <a class="navbar-brand" href="#"><i class="fa fa-home"></i>HCLServices</a>
     </div>
-  </div> -->
+    </div>
 
-  <div class="rowbar">
-      <div class="row">
-        <div class="col-2">
-<div class="navbar-header">
-    <a class="navbar-brand" href="#"><i class="fa fa-home"></i>HCLServices</a> 
-  </div>
-  </div>
-  <div class="col-4">
-  
-          <form class="navbar-form" role="search">
-          <div class="col input-group">
-              <input type="text" class="form-control" placeholder="Search" name="q">
-              <div class="input-group-btn">
-                  <a class="btn btn-default" type="submit"><i class="fa fa-search"></i></a>
-              </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="col-4">
+    
+            <form class="navbar-form" role="search">
+            <div class="col input-group">
+                <input type="text" class="form-control" placeholder="Search" name="q">
+                <div class="input-group-btn">
+                    <a class="btn btn-default" type="submit"><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+            </form>    
+ </div>
+          <div class="col-6 supportBar">
+            <ul class="icons">
+              <li><a href="header" class="arrowInOrg" (mouseover)="onOpenHandled()" >HCL</a></li>
+              <li><a href="#" ><i class="fa fa-bell-o" ></i></a></li>
+              <li><a href="#"><i class="fa fa-cog" ></i></a></li>
+              <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
+              <li><a href="#"><i class="fa fa-user"></i></a></li>
+            </ul>
+            
+
           </div>
-          </form>    
-</div>
-        <div class="col-6 supportBar">
-          <ul class="icons">
-            <li><a href="#">HCL</a>
-<!--   <div style="width: 315px; height: 500px; border: 1px solid #bababa; position: absolute;float:right;margin-top:30px;"></div> -->
-</li>
-            <li><a href="#"><i class="fa fa-bell-o" ></i></a></li>
-            <li><a href="#"><i class="fa fa-cog" ></i></a></li>
-            <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
-            <li><a href="#"><i class="fa fa-user"></i></a></li>
-          </ul>
-          
 
+        </div>
+    </div><!-- /.navbar-collapse -->
+  </div>
+  <div id="popup" [ngStyle]="{'display':display}" >
+      <div class="nav-arrow arrowInOrg" style="position: absolute; left: 25%;">
+        <div class="nav-arrow-inner">
+        </div>
+      </div>
+      
+      <div style="border-bottom: 1px solid #EDEDED;" class="set-list user-info">
+          <div class="d-flex justify-content-end">
+              <button type="button" class="close" (click)="onCloseHandled()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+          <div class="clearfix text-center">
+              <h3>
+      <img class="userimage" src="https://contacts.zoho.in/file?ID=ade4031a38f60e961eb74cfb5896dda8e56d1091c8c5279475f1bcc615aa1ff5c6fcbc48e0429f0e04ec3b0b1f76c729d7cae76802f0f2b639b6b66c6319014e9ad54efc926a1ba40d0dde47e9ce8d3b&amp;fs=thumb" class="profile-pic">
+              </h3>
+              <div class="over-flow text-uppercase">RICHA
+              </div>
+              <p class="userinfo">
+                User ID:  60000709508<br>
+                Organization ID:  60000709239<br>
+                richaanand.17@gmail.com
+                </p>
+            
+              <p >
+                  <a href="#" target="_blank" class="userinout">
+                    My Account
+                  </a>
+                  <span style="padding:0 10px;"  class="userinout">|</span>
+                  <a href="#" id="signout" class="userinout">Sign Out</a>
+                </p>
+            
+            </div>
+        
         </div>
 
       </div>
-  </div><!-- /.navbar-collapse -->
-
-  
-
-  
+    
+         
+     

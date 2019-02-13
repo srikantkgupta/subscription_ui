@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  display='none';
   constructor() { }
 
   ngOnInit() {
   }
+ 
+  onOpenHandled(){
+    this.display='block'; 
+ }
+ onCloseHandled(){
+     this.display='none'; 
+}
 
+  
 }

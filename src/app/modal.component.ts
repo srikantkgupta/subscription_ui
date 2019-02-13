@@ -4,14 +4,13 @@ import * as $ from 'jquery';
 import { ModalsService } from './modal.service';
 
 @Component({
-    //moduleId: module.id.toString(),
+  //  moduleId: module.id.toString(),
     selector: 'modal',
     template: '<ng-content></ng-content>'
 })
 
 export class ModalPopUpComponent implements OnInit, OnDestroy {
     @Input() id: string;
-    
     private element: JQuery;
      //module: NodeModule;
 

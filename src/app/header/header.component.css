@@ -1,10 +1,64 @@
+
+/*NAVBAR STYLES*/
+
 .navbar-brand{font-size: 25px;}
 
-    .row{padding-top:6px;padding-bottom:3px;background-color: #f7f7f7;}
+    .row{padding-top:15px;padding-bottom:10px;background-color: #f7f7f7;}
    
    .form-control{font-size: 15px;}
     ul.icons{list-style:none;}
     li{display: inline;margin:0 20px 0 20px;}
     .icons{font-size: 20px;float:right;}
     .fa-question-circle{text-decoration:none; }
-
+    #popup{width: 400px; position: fixed;top:73px; bottom: 0;
+        right: 0;box-shadow: -2px 5px 10px 1px rgba(0,0,0,.176);
+        z-index: 1001;
+        background-color: #fff;}
+    #popup .user-info {background-color: #f3f8fe;}
+    .set-list {padding: 10px 20px;}
+    .close-details{margin-left: 25px;cursor: pointer;color: #777;}
+    button.close{font-size:30px;}
+    .over-flow {font-size: 20px;}
+    p.userinfo{font-size: 15px;}
+ .userinout{font-size:20px;}
+  .user-info{background-color: #f3f8fe;}
+ 
+.nav-arrow {
+    border-style: solid;
+    border-width:0 10px 10px;
+    border-color: transparent;
+    border-top-width: 0;
+    border-bottom: 9px solid #ccc;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;background-color: #f3f8fe;
+    top: -9px;
+}
+.nav-arrow .nav-arrow-inner {
+    border-style: solid;background-color: #f3f8fe;
+    border-width: 0 10px 10px;
+    border-color: transparent;
+    border-top-width: 0;
+    border-bottom: 9px solid #fff;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 1px;
+    left: -9px;
+}
+.profile-pic {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+.userimage {
+    transition: transform .2s;
+    margin: 0 auto;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
